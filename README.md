@@ -71,43 +71,44 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
 
     `const AuthContext = React.createContext(null);`
 *   El metodo render del proveedor debe estar descrito de la siguiente forma:
-    ``` 
-    return (
-        <AuthContext.Provider
-            value={{
-                isLoggedIn,
-                user,
-                login: this.login,
-                logout: this.logout
-            }}>
-            {this.props.children}
-        </AuthContext.Provider>
-    )
-    ``` 
-    
+
+``` 
+return (
+    <AuthContext.Provider
+        value={{
+            isLoggedIn,
+            user,
+            login: this.login,
+            logout: this.logout
+        }}>
+        {this.props.children}
+    </AuthContext.Provider>
+)
+``` 
+
 *   Los HOCs que implementen contexto, deben inyectar el consumidor al componenete envuelto, y comienzan con el prefijo `with`.
     Ejemplo:
     
      
-    ``` 
-    const withAuthConsumer = (WrappedComponent: any, props: any = {}) => {
-      return class extends React.Component {
-          render() {
-              return (
-                  <AuthConsumer>
-                      {context => (
-                          <WrappedComponent
-                              context={context}
-                              {...props}
-                          />
-                      )}
-                  </AuthConsumer>
-              )
-          }
+``` 
+const withAuthConsumer = (WrappedComponent: any, props: any = {}) => {
+  return class extends React.Component {
+      render() {
+          return (
+              <AuthConsumer>
+                  {context => (
+                      <WrappedComponent
+                          context={context}
+                          {...props}
+                      />
+                  )}
+              </AuthConsumer>
+          )
       }
-    };
-    export default withAuthConsumer
-    ```
+  }
+};
+export default withAuthConsumer
+```
     
 ######Assets
 *  Para archivos como imágenes, fuentes o estilos globales, almacenar dentro de `/src/assets`.
