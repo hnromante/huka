@@ -28,7 +28,7 @@ Construye el proyecto en la carpeta `build`.
 
 Minifica los archivos y deja la aplicación lista para producción.
 
-`NOTA:` Si se está ocupando el buildpack de heroku para hacer el deploy (heroku create $APP_NAME --buildpack mars/create-react-app),  no es necesario construir el proyecto. Basta con incluir yarn install en el pipeline. `MAS INFO: ...`
+`NOTA:` Si se está ocupando el buildpack de heroku para hacer el deploy (heroku create $APP_NAME --buildpack mars/create-react-app),  no es necesario construir el proyecto. Basta con incluir yarn install en el pipeline. [Más info](https://elements.heroku.com/buildpacks/mars/create-react-app-buildpack).
 
 ## Reglas generales del proyecto
 Reglas de programación y guias generales para mantener consistencia en el proyecto.
@@ -65,11 +65,18 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
 *   Este tipo de archivos debe ser usado exclusivamente para la composición de componenetes que son rooteados con react-router.
     
     Ejemplo: al visitar la URL `/mis-facturas/` se debe linkear con react-router el componenete `<InvoicesContainer/>`, este contin
+    
+    
 ######Contextos
+
+
 [Context API de react](https://reactjs.org/docs/context.html).
 *   Los contextos deben ser nombrados con el sufijo `Context`; los proveedores `Provider` y los consumidores `Consumer`.
 
+
     `const AuthContext = React.createContext(null);`
+   
+    
 *   El metodo render del proveedor debe estar descrito de la siguiente forma:
 
 ``` 
