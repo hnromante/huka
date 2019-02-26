@@ -60,8 +60,8 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
 *   Documentar Clases componentes según los guidelines de [JSDocs](http://usejsdoc.org/).
 
 
-######Pantallas o Contenedores
-*   Los contenedores deben ser nombrados en `CamelCase`, con el sufijo `Container`. Almacenarlos en la carpeta `src/Containers`.
+######Pantallas/Screens/Contenedores
+*   Las pantallas deben ser nombrados en `CamelCase`, con el sufijo `Screen`. Almacenarlos en la carpeta `src/Screens`.
 *   Este tipo de archivos debe ser usado exclusivamente para la composición de componenetes que son rooteados con react-router.
     
     Ejemplo: al visitar la URL `/mis-facturas/` se debe linkear con react-router el componenete `<InvoicesContainer/>`, este contin
@@ -71,10 +71,10 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
 
 
 [Context API de react](https://reactjs.org/docs/context.html).
+
 *   Los contextos deben ser nombrados con el sufijo `Context`; los proveedores `Provider` y los consumidores `Consumer`.
 
-
-    `const AuthContext = React.createContext(null);`
+`const AuthContext = React.createContext(null);`
    
     
 *   El metodo render del proveedor debe estar descrito de la siguiente forma:
