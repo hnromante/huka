@@ -69,7 +69,7 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
 [Context API de react](https://reactjs.org/docs/context.html).
 *   Los contextos deben ser nombrados con el sufijo `Context`; los proveedores `Provider` y los consumidores `Consumer`.
 
-    ```const AuthContext = React.createContext(null);```
+    `const AuthContext = React.createContext(null);`
 *   El metodo render del proveedor debe estar descrito de la siguiente forma:
     ``` 
     return (
@@ -84,8 +84,11 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
         </AuthContext.Provider>
     )
     ``` 
+    
 *   Los HOCs que implementen contexto, deben inyectar el consumidor al componenete envuelto, y comienzan con el prefijo `with`.
-    Ejemplo: 
+    Ejemplo:
+    
+     
     ``` 
     const withAuthConsumer = (WrappedComponent: any, props: any = {}) => {
       return class extends React.Component {
