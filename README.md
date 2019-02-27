@@ -33,6 +33,32 @@ Minifica los archivos y deja la aplicación lista para producción.
 ## Reglas generales del proyecto
 Reglas de programación y guias generales para mantener consistencia en el proyecto.
 
+######Componentes
+
+Los componenetes deben ser nombrados en `CamelCase`, al igual que la carpeta que los contiene. Cada carpeta contiene los siguientes archivos:
+```
+/src/components/Invoice/
+* Componente: Invoice.tsx
+* Estilos: Invoice.scss
+* Testing (Ver sección Tests): Invoice.test.tsx
+* Documentación (Ver sección DOCS): Invoice.md
+```
+
+*   Cada componenete tiene su `CSS` o `SCSS` autocontenido, con excepción de los estilos globales ubicados en `/src/assets/styles`.
+    
+*   Los componenetes no deben superar las `4 indentaciones de profundidad`, y la indentación es de `2 espacios`.
+
+*   Por razones de performance, al momento de iterar una lista, es importante no utilizar arrow functions para pasar parámetros a componenetes.
+    [Más información](https://maarten.mulders.it/2017/07/no-bind-or-arrow-functions-in-in-jsx-props-why-how/).
+
+
+######Pantallas/Screens/Contenedores
+*   Las pantallas deben ser nombrados en `CamelCase`, con el sufijo `Screen`. Almacenarlos en la carpeta `src/Screens`.
+*   Este tipo de archivos debe ser usado exclusivamente para la composición de componenetes que son rooteados con react-router.
+    
+    Ejemplo: al visitar la URL `/mis-facturas/` se debe linkear con react-router el componenete `<InvoicesContainer/>`, este contin
+    
+  
 ######Git
 *   Los commits del proyecto deben ser escritos en **inglés**.
 *   Cada feature nueva debe ir en una rama para ser mergeado posteriormente.
@@ -45,31 +71,13 @@ Documentación sobre tests: (https://facebook.github.io/create-react-app/docs/ru
 *   Ocupar `Shallow rendering`  de Enzyme para componentes que tengan hijos.
 *   `Sanity` (...)
 
+######Documentación
+Para documentar el proyecto y ayudar en la eperiencia de desarrollo, ocupamos la herramienta [react-styleguidist](https://github.com/styleguidist/react-styleguidist)
+con el parser de [Typescript](https://github.com/styleguidist/react-docgen-typescript).
 
-######Componentes
-*   Los componenetes deben ser nombrados en `CamelCase`, al igual que la carpeta que los contiene. Almacenarlos en la carpeta `src/Components`.
+*   Documentar componentes y sus interfaces según los guidelines de [JSDocs](http://usejsdoc.org/).
 
-*   Cada componenete tiene su `CSS` o `SCSS` autocontenido, con excepción de los estilos globales.
-    Ejemplo: la carpeta `src/Components/Invoices` tiene `Invoice.tsx`, `Invoice.test.tsx` e `Invoice.css`
-    
-*   Los componenetes no deben superar las `4 indentaciones de profundidad`, y la indentación es de `2 espacios`.
-
-*   Por razones de performance, al momento de iterar una lista, es importante no utilizar arrow functions para pasar parámetros a componenetes.
-    [Más información](https://maarten.mulders.it/2017/07/no-bind-or-arrow-functions-in-in-jsx-props-why-how/).
-
-*   Documentar Clases componentes según los guidelines de [JSDocs](http://usejsdoc.org/).
-
-
-######Pantallas/Screens/Contenedores
-*   Las pantallas deben ser nombrados en `CamelCase`, con el sufijo `Screen`. Almacenarlos en la carpeta `src/Screens`.
-*   Este tipo de archivos debe ser usado exclusivamente para la composición de componenetes que son rooteados con react-router.
-    
-    Ejemplo: al visitar la URL `/mis-facturas/` se debe linkear con react-router el componenete `<InvoicesContainer/>`, este contin
-    
-    
 ######Contextos
-
-
 [Context API de react](https://reactjs.org/docs/context.html).
 
 *   Los contextos deben ser nombrados con el sufijo `Context`; los proveedores `Provider` y los consumidores `Consumer`.
