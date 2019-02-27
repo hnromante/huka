@@ -28,8 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "doc": "react-doc-generator ./src/components -o DOCUMENTATION.md",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "docs": "styleguidist server",
+    "docs:build": "styleguidist build"
   },
   "eslintConfig": {
     "extends": "react-app"

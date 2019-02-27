@@ -15,8 +15,19 @@ Editor recomendado **WebStorm**
 
 ### `npm start` o `yarn start`
 
-Corre la aplicación en modo development (hot reloading).
+Corre la aplicación en modo development.
+
 Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
+
+### `npm run docs`
+
+Corre la documentación y un entorno para desarrollar componenetes de forma aislada.
+
+Abrir [http://localhost:6060](http://localhost:6060) para ver en el navegador.
+
+### `npm run docs:build`
+Genera la documentación en formato html dentro de la carpeta `/styleguide/`. 
+Abril el archivo `/styleguide/index.html` para visualizar.
 
 ### `npm test` o `yarn test`
 
