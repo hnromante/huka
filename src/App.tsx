@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './assets/styles/App.scss';
-import DummyComponent from "./components/DummyComponent";
-
+import CustomButton from "./components/CustomButton/CustomButton";
 
 class App extends Component {
   render() {
@@ -13,6 +12,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
+          <CustomButton title={'s'} buttonType={'primary'} onClick={()=>console.log("pepe")}/>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -21,7 +21,6 @@ class App extends Component {
           >
             Learn React
           </a>
-          <DummyComponent/>
         </header>
       </div>
     );
