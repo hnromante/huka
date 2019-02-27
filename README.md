@@ -27,7 +27,7 @@ Abrir [http://localhost:6060](http://localhost:6060) para ver en el navegador.
 
 ### `npm run docs:build`
 Genera la documentación en formato html dentro de la carpeta `/styleguide/`. 
-Abril el archivo `/styleguide/index.html` para visualizar.
+Abrir el archivo `/styleguide/index.html` para visualizar.
 
 ### `npm test` o `yarn test`
 
