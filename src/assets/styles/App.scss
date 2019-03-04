@@ -1,4 +1,4 @@
-@import "test.scss";
+@import "provider-theme";
 
 .App {
   text-align: center;
@@ -23,6 +23,10 @@
 
 .App-link {
   color: red;
+}
+
+.success{
+  color: green;
 }
 
 @keyframes App-logo-spin {
