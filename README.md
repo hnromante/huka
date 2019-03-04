@@ -1,5 +1,7 @@
-# FINTO - FRONTEND
-Aplicación frontend del proyecto PI-5 FINTO en react.
+# HUKA - FRONTEND
+**ESCRIBIR HUKA EN MAYUSCULA**
+
+Aplicación frontend de HUKA!
 Proyecto creado con create-react-app --typescript
 (https://facebook.github.io/create-react-app/docs/adding-typescript)
 ## Instalación proyecto en local
@@ -45,6 +47,9 @@ Minifica los archivos y deja la aplicación lista para producción.
 Reglas de programación y guias generales para mantener consistencia en el proyecto.
 
 ######Componentes
+
+**[DOCUMENTACIÓN DE ESTILOS](https://github.com/sruda/steroidesign/blob/master/Airbnb.md)**
+
 
 Los componenetes deben ser nombrados en `CamelCase`, al igual que la carpeta que los contiene. Cada carpeta contiene los siguientes archivos:
 ```

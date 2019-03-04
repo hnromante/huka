@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './assets/images/logo.png';
 import './assets/styles/App.scss';
 import CustomButton from "./components/CustomButton/CustomButton";
 
@@ -8,19 +8,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <h1>HUKA! 🌽</h1>
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <CustomButton title={'s'} buttonType={'primary'} onClick={()=>console.log("pepe")}/>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
     );
